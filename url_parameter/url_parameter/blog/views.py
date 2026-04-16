@@ -11,5 +11,5 @@ def username_details(request, username):
 def article_details(request, year):
     return HttpResponse(f"Article year is {year}")
 
-def article_year_month(request, year, month):
-    return HttpResponse(f"Article year is {year} and month is {month}")
+def article_year_month(request, **krargs):
+    return HttpResponse(f"Article year is {krargs['year']} and month is {krargs['month']}")
