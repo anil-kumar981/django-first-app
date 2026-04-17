@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Welcome to the Blog!</h2>
+    <ul>
+        <li>{{ name }}</li>
+        <li>{{ age }}</li>
+        <li>class: Class user name: {{ user.name }}, class age: {{ user.age }}</li>
+        <li>List of number: {{numbers}}</li>
+        <li>Is Authenticated: {{ is_authenticated}}</li>
+    </ul>
+{% endblock %}
