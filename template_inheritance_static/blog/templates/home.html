@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - My Blog{% endblock %}
+{% load static %}
+<script src="{% static 'js/index.js' %}"></script>
+{% block content %}
+    
+<form method="POST" action="/blog/submit/">
+    {% csrf_token %}
+     <input type="text" id="name" name="name" placeholder="Enter your name">
+    <input type="text" id="age" name="age" placeholder="Enter your age">
+    <input type="text" id="hobbies"s name="hobbies" placeholder="Enter your hobbies (comma separated)">
+    <button type="submit" id="submit-btn">Submit</button> 
+</form>
+   
+{% endblock %}
