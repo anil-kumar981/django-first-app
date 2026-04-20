@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h2>Welcome to My Blog</h2>
+    <p>This is the home page of my blog.</p>
+    {% regroup students by class as student_groups %}
+    {% for group in student_groups %}
+        <ul>
+            {% for student in group.list %}
+                <li>{{ student.name }} - {{ student.age }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+{% endblock %}
